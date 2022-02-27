@@ -1,5 +1,11 @@
-import React from "react";
+import Timer from "./components/Timer";
 
-const App = () => <h1>Hello World!!!</h1>;
+const targetTime = {
+  hours: 11,
+  minutes: 40,
+  seconds: 0,
+};
+
+const App = () => <Timer targetTime={targetTime} />;
 
 export default App;
