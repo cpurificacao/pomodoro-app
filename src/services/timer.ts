@@ -4,7 +4,7 @@ import { TargetTime, TimerUpdatePayload } from "../@types/timer";
 const ONE_SECOND = 1000;
 const EXTRACT_TIME = /(\d\d):(\d\d):(\d\d)/;
 
-class Timer {
+class TimerService {
   private _events = new EventEmitter();
   private target = new Date();
   private interval!: NodeJS.Timer;
@@ -51,4 +51,4 @@ class Timer {
   }
 }
 
-export default Timer;
+export default TimerService;
