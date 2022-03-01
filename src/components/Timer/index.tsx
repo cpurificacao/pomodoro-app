@@ -22,12 +22,32 @@ const Timer: FC<TimerProps> = ({ targetTime }) => {
   };
 
   return (
-    <section className="timer">
-      <span className="hours">{hours < 10 ? `0${hours}` : hours}</span>
-      <span className="separator">:</span>
-      <span className="minutes">{minutes < 10 ? `0${minutes}` : minutes}</span>
-      <span className="separator">:</span>
-      <span className="seconds">{seconds < 10 ? `0${seconds}` : seconds}</span>
+    <section className="timer-container">
+      <div className="card">
+        <div className="box">
+          <div className="percent">
+            <svg>
+              <circle cx="50" cy="50" r="50"></circle>
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <div className="timer-digits">
+              <h2>
+                <span className="hours">
+                  {hours < 10 ? `0${hours}` : hours}
+                </span>
+                <span className="separator">:</span>
+                <span className="minutes">
+                  {minutes < 10 ? `0${minutes}` : minutes}
+                </span>
+                <span className="separator">:</span>
+                <span className="seconds">
+                  {seconds < 10 ? `0${seconds}` : seconds}
+                </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
